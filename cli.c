@@ -7,7 +7,6 @@
  * The CLI does NOT run as a server — it's a client that sends requests
  * and waits for replies. It's the only process with direct user interaction.
  */
-
 #include "common.h"
 #include <stdio.h>
 #include <stdlib.h>
