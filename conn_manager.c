@@ -268,29 +268,6 @@ resp->status = STATUS_SUCCESS;
 LOG(LOG_INFO, "deleted connection '%s'", deleted_name);
 }
 
-void handle_stop_traffic(udp_message_t *resp)
-{
-    udp_message_t req = {0};
-    req.msg_type = MSG_STOP_TRAFFIC;
-    req.status = STATUS_REQUEST;
-
-    udp_message_t traffic_resp = {0};
-    if (!send_udp_message_and_receive(client_socket, &req, &traffic_resp, TRAFFIC_MGR_UDP)) {
-        LOG(LOG_ERROR, "Failed to send stop traffic to traffic manager");
-        resp->status = STATUS_FAILURE;
-        return;
-    }
-
-    if (traffic_resp.status != STATUS_SUCCESS) {
-        LOG(LOG_ERROR, "Traffic manager failed to stop traffic");
-        resp->status = STATUS_FAILURE;
-        return;
-    }
-
-    resp->status = STATUS_SUCCESS;
-    LOG(LOG_INFO, "Traffic stopped via connection manager");
-}
-
 bool dispatch(const udp_message_t *req, udp_message_t *resp)
 {
 bool send_reply = false;

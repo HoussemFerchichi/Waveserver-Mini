@@ -1,0 +1,29 @@
+common.c
+
+The logger opened wsmini.log every time but never closed it. After enough commands, file handles would pile up and logging would stop. That is exactly the B2 bug in the challenge. 
+
+
+
+port_manager.c
+
+The main port-state bug was in the logic that recalculates whether a port is UP or DOWN. A port should only be operationally UP when it is admin-enabled and has no active fault. Because that logic was wrong, set port and delete port could say they worked while the real state stayed inconsistent, which matches B1 and B4. I also added the missing fault handlers and the periodic health-check logging that the challenge asks for. 
+
+
+
+There was also a switch-case bug: MSG_SET_PORT needed its own break. Without that, it could fall through into the delete-port path and undo the enable immediately. That is why the CLI could print success but the port still looked wrong.
+
+
+
+conn_manager.c
+
+The connection code had two big issues. First, the port info copy used the wrong size, so the received port_t data was incomplete/corrupted from the connection manager’s point of view. That makes connections appear DOWN even when both ports are UP, which matches B5. Second, deleting a connection by a bad name logged an error path but still ended up behaving like success unless the response was explicitly marked failed, which is B3. I also added the missing create-connection validation the challenge requires: unique name, valid line/client pairing, client port not already used, and both ports must be operationally UP. 
+
+
+
+traffic_manager.c
+
+The traffic generation path was incomplete. I filled in the missing logic so it creates a frame, asks the connection manager for a route, forwards only if the connection is UP, otherwise drops it, and updates both traffic stats and port counters. I also added the missing stop-traffic handler. Those correspond to F1 and F4. 
+
+
+the project was mostly failing because state changes were not being applied correctly, one message handler could accidentally undo another, one struct copy was broken, and some required features were just missing.
+
