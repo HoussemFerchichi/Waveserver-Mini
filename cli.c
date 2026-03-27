@@ -426,7 +426,7 @@ void cmd_stop_traffic(void)
         printf("[ERROR] Failed to stop traffic\n");
         return;
     }
-    printf("[OK] Traffic generation stopped\n");
+    printf("[OK] Traffic stopped\n");
 }
 
 /**

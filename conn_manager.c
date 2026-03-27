@@ -138,7 +138,10 @@ void handle_create_connection(const udp_message_t *req, udp_message_t *resp)
 {
 const udp_create_conn_request_t *payload = (const udp_create_conn_request_t *)req->payload;
 
-size_t name_len = strnlen(payload->name, MAX_CONN_NAME_CHARACTER);
+size_t name_len = 0;
+while (name_len < MAX_CONN_NAME_CHARACTER && payload->name[name_len] != '\0') {
+    name_len++;
+}
 if (name_len == 0 || name_len >= MAX_CONN_NAME_CHARACTER) {
 set_error_msg(resp, "connection name must be 1-31 characters");
 return;
@@ -169,7 +172,7 @@ for (int i = 0; i < MAX_CONNS; i++) {
 if (conns[i].client_port == client_port) {
 udp_cmd_reply_t *reply = (udp_cmd_reply_t *)resp->payload;
 snprintf(reply->error_msg, sizeof(reply->error_msg),
-"Client Port-%d already has a connection (%s)",
+"Port %d already connected (%s)",
 client_port,
 conns[i].conn_name);
 resp->status = STATUS_FAILURE;
@@ -266,6 +269,29 @@ found_conn->conn_name[0] = '\0';
 
 resp->status = STATUS_SUCCESS;
 LOG(LOG_INFO, "deleted connection '%s'", deleted_name);
+}
+
+void handle_stop_traffic(udp_message_t *resp)
+{
+    udp_message_t req = {0};
+    req.msg_type = MSG_STOP_TRAFFIC;
+    req.status = STATUS_REQUEST;
+
+    udp_message_t traffic_resp = {0};
+    if (!send_udp_message_and_receive(client_socket, &req, &traffic_resp, TRAFFIC_MGR_UDP)) {
+        LOG(LOG_ERROR, "Failed to send stop traffic to traffic manager");
+        resp->status = STATUS_FAILURE;
+        return;
+    }
+
+    if (traffic_resp.status != STATUS_SUCCESS) {
+        LOG(LOG_ERROR, "Traffic manager failed to stop traffic");
+        resp->status = STATUS_FAILURE;
+        return;
+    }
+
+    resp->status = STATUS_SUCCESS;
+    LOG(LOG_INFO, "Traffic stopped via connection manager");
 }
 
 bool dispatch(const udp_message_t *req, udp_message_t *resp)
