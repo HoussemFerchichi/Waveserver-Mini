@@ -416,7 +416,6 @@ void cmd_start_traffic(uint8_t client_port, uint8_t line_port)
  */
 void cmd_stop_traffic(void)
 {
-    printf("TODO: F4 — Stop Traffic CLI (/2 pts)\n");
     udp_message_t req = {0};
     req.msg_type = MSG_STOP_TRAFFIC;
     req.status = STATUS_REQUEST;
