@@ -3857,3 +3857,178 @@
 [26-03-26 20:00:23] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-4 and line port-2
 [26-03-26 20:00:23] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #170 DROPPED: no usable connection for client-4 line-2
 [26-03-26 20:00:23] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=3: rx=0 dropped=1
+[26-03-26 20:00:25] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:00:25] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:25] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:25] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=52
+[26-03-26 20:00:25] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=32
+[26-03-26 20:00:25] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=47
+[26-03-26 20:00:25] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=39
+[26-03-26 20:00:26] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #171 generated: client-6 -> line-2 msg="Frame-171 payload"
+[26-03-26 20:00:26] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-6 and line port-2
+[26-03-26 20:00:26] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #171 DROPPED: no usable connection for client-6 line-2
+[26-03-26 20:00:26] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=5: rx=0 dropped=1
+[26-03-26 20:00:29] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #172 generated: client-3 -> line-1 msg="Frame-172 payload"
+[26-03-26 20:00:29] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-3 and line port-1
+[26-03-26 20:00:29] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #172 DROPPED: no usable connection for client-3 line-1
+[26-03-26 20:00:29] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=2: rx=0 dropped=1
+[26-03-26 20:00:30] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:00:30] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:30] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:30] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=53
+[26-03-26 20:00:30] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=32
+[26-03-26 20:00:30] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=47
+[26-03-26 20:00:30] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=40
+[26-03-26 20:00:32] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #173 generated: client-6 -> line-2 msg="Frame-173 payload"
+[26-03-26 20:00:32] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-6 and line port-2
+[26-03-26 20:00:32] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #173 DROPPED: no usable connection for client-6 line-2
+[26-03-26 20:00:32] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=5: rx=0 dropped=1
+[26-03-26 20:00:35] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #174 generated: client-4 -> line-1 msg="Frame-174 payload"
+[26-03-26 20:00:35] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-4 and line port-1
+[26-03-26 20:00:35] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #174 DROPPED: no usable connection for client-4 line-1
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=3: rx=0 dropped=1
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=53
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=33
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=47
+[26-03-26 20:00:35] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=41
+[26-03-26 20:00:38] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #175 generated: client-6 -> line-2 msg="Frame-175 payload"
+[26-03-26 20:00:38] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-6 and line port-2
+[26-03-26 20:00:38] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #175 DROPPED: no usable connection for client-6 line-2
+[26-03-26 20:00:38] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=5: rx=0 dropped=1
+[26-03-26 20:00:40] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:00:40] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:40] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:40] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=53
+[26-03-26 20:00:40] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=33
+[26-03-26 20:00:40] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=47
+[26-03-26 20:00:40] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=42
+[26-03-26 20:00:41] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #176 generated: client-4 -> line-1 msg="Frame-176 payload"
+[26-03-26 20:00:41] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-4 and line port-1
+[26-03-26 20:00:41] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #176 DROPPED: no usable connection for client-4 line-1
+[26-03-26 20:00:41] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=3: rx=0 dropped=1
+[26-03-26 20:00:44] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #177 generated: client-4 -> line-2 msg="Frame-177 payload"
+[26-03-26 20:00:44] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-4 and line port-2
+[26-03-26 20:00:44] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #177 DROPPED: no usable connection for client-4 line-2
+[26-03-26 20:00:44] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=3: rx=0 dropped=1
+[26-03-26 20:00:45] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:00:45] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:45] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:45] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=53
+[26-03-26 20:00:45] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=35
+[26-03-26 20:00:45] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=47
+[26-03-26 20:00:45] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=42
+[26-03-26 20:00:47] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #178 generated: client-5 -> line-2 msg="Frame-178 payload"
+[26-03-26 20:00:47] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-5 and line port-2
+[26-03-26 20:00:47] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #178 DROPPED: no usable connection for client-5 line-2
+[26-03-26 20:00:47] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=4: rx=0 dropped=1
+[26-03-26 20:00:50] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #179 generated: client-3 -> line-2 msg="Frame-179 payload"
+[26-03-26 20:00:50] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-3 and line port-2
+[26-03-26 20:00:50] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #179 DROPPED: no usable connection for client-3 line-2
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=2: rx=0 dropped=1
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=54
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=35
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=48
+[26-03-26 20:00:50] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=42
+[26-03-26 20:00:53] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #180 generated: client-3 -> line-1 msg="Frame-180 payload"
+[26-03-26 20:00:53] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-3 and line port-1
+[26-03-26 20:00:53] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #180 DROPPED: no usable connection for client-3 line-1
+[26-03-26 20:00:53] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=2: rx=0 dropped=1
+[26-03-26 20:00:55] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:00:55] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:55] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:00:55] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=55
+[26-03-26 20:00:55] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=35
+[26-03-26 20:00:55] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=48
+[26-03-26 20:00:55] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=42
+[26-03-26 20:00:56] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #181 generated: client-6 -> line-1 msg="Frame-181 payload"
+[26-03-26 20:00:56] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-6 and line port-1
+[26-03-26 20:00:56] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #181 DROPPED: no usable connection for client-6 line-1
+[26-03-26 20:00:56] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=5: rx=0 dropped=1
+[26-03-26 20:00:59] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #182 generated: client-5 -> line-2 msg="Frame-182 payload"
+[26-03-26 20:00:59] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-5 and line port-2
+[26-03-26 20:00:59] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #182 DROPPED: no usable connection for client-5 line-2
+[26-03-26 20:00:59] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=4: rx=0 dropped=1
+[26-03-26 20:01:01] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:01:01] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:01] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:01] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=55
+[26-03-26 20:01:01] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=35
+[26-03-26 20:01:01] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=49
+[26-03-26 20:01:01] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=43
+[26-03-26 20:01:02] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #183 generated: client-3 -> line-2 msg="Frame-183 payload"
+[26-03-26 20:01:02] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-3 and line port-2
+[26-03-26 20:01:02] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #183 DROPPED: no usable connection for client-3 line-2
+[26-03-26 20:01:02] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=2: rx=0 dropped=1
+[26-03-26 20:01:05] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #184 generated: client-5 -> line-1 msg="Frame-184 payload"
+[26-03-26 20:01:05] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-5 and line port-1
+[26-03-26 20:01:05] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #184 DROPPED: no usable connection for client-5 line-1
+[26-03-26 20:01:05] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=4: rx=0 dropped=1
+[26-03-26 20:01:06] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:01:06] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:06] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:06] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=56
+[26-03-26 20:01:06] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=35
+[26-03-26 20:01:06] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=50
+[26-03-26 20:01:06] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=43
+[26-03-26 20:01:08] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #185 generated: client-4 -> line-2 msg="Frame-185 payload"
+[26-03-26 20:01:08] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-4 and line port-2
+[26-03-26 20:01:08] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #185 DROPPED: no usable connection for client-4 line-2
+[26-03-26 20:01:08] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=3: rx=0 dropped=1
+[26-03-26 20:01:11] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #186 generated: client-3 -> line-1 msg="Frame-186 payload"
+[26-03-26 20:01:11] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-3 and line port-1
+[26-03-26 20:01:11] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #186 DROPPED: no usable connection for client-3 line-1
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=2: rx=0 dropped=1
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=57
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=36
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=50
+[26-03-26 20:01:11] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=43
+[26-03-26 20:01:14] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #187 generated: client-3 -> line-1 msg="Frame-187 payload"
+[26-03-26 20:01:14] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-3 and line port-1
+[26-03-26 20:01:14] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #187 DROPPED: no usable connection for client-3 line-1
+[26-03-26 20:01:14] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=2: rx=0 dropped=1
+[26-03-26 20:01:16] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:01:16] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:16] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:16] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=58
+[26-03-26 20:01:16] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=36
+[26-03-26 20:01:16] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=50
+[26-03-26 20:01:16] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=43
+[26-03-26 20:01:17] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #188 generated: client-6 -> line-2 msg="Frame-188 payload"
+[26-03-26 20:01:17] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-6 and line port-2
+[26-03-26 20:01:17] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #188 DROPPED: no usable connection for client-6 line-2
+[26-03-26 20:01:17] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=5: rx=0 dropped=1
+[26-03-26 20:01:20] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #189 generated: client-6 -> line-1 msg="Frame-189 payload"
+[26-03-26 20:01:20] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-6 and line port-1
+[26-03-26 20:01:20] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #189 DROPPED: no usable connection for client-6 line-1
+[26-03-26 20:01:20] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=5: rx=0 dropped=1
+[26-03-26 20:01:21] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:01:21] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:21] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:21] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=58
+[26-03-26 20:01:21] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=36
+[26-03-26 20:01:21] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=50
+[26-03-26 20:01:21] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=45
+[26-03-26 20:01:23] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #190 generated: client-3 -> line-1 msg="Frame-190 payload"
+[26-03-26 20:01:23] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-3 and line port-1
+[26-03-26 20:01:23] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #190 DROPPED: no usable connection for client-3 line-1
+[26-03-26 20:01:23] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=2: rx=0 dropped=1
+[26-03-26 20:01:26] [DEBUG] [traffic_mgr] [traffic_manager.c:32] Frame #191 generated: client-4 -> line-2 msg="Frame-191 payload"
+[26-03-26 20:01:26] [WARN] [conn_mgr] [conn_manager.c:118] MSG_LOOKUP_CONNECTION: no connection for client port-4 and line port-2
+[26-03-26 20:01:26] [WARN] [traffic_mgr] [traffic_manager.c:74] Frame #191 DROPPED: no usable connection for client-4 line-2
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:118] Updated counters for port_idx=3: rx=0 dropped=1
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:192] ----------------------------- HEALTH CHECK -----------------------------
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:195] port_idx=0 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:195] port_idx=1 (LINE) admin=Disabled fault=None oper=DOWN received=0 dropped=0
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:195] port_idx=2 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=59
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:195] port_idx=3 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=37
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:195] port_idx=4 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=50
+[26-03-26 20:01:26] [INFO] [port_mgr] [port_manager.c:195] port_idx=5 (CLIENT) admin=Disabled fault=None oper=DOWN received=0 dropped=45
