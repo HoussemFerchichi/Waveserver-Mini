@@ -64,20 +64,29 @@ udp_message_t counter_msg = {0};
 counter_msg.msg_type = MSG_UPDATE_COUNTERS;
 counter_msg.status = STATUS_REQUEST;
 
+// Update client port counters always for received traffic
 udp_counter_update_t *counter = (udp_counter_update_t *)counter_msg.payload;
 counter->port_id = frame.header.client_port;
-counter->pkts_rx = forwarded ? 1 : 0;
+counter->pkts_rx = 1;
 counter->pkts_dropped = forwarded ? 0 : 1;
-
-if (!forwarded) {
-stats.total_dropped++;
-LOG(LOG_WARN, "Frame #%u DROPPED: no usable connection for client-%u line-%u",
-frame.header.frame_id,
-frame.header.client_port,
-frame.header.line_port);
-}
-
 send_udp_message_one_way(client_socket, &counter_msg, PORT_MANAGER_UDP);
+
+if (forwarded) {
+    // Update line port counters when traffic is forwarded
+    counter_msg.msg_type = MSG_UPDATE_COUNTERS;
+    counter_msg.status = STATUS_REQUEST;
+    counter = (udp_counter_update_t *)counter_msg.payload;
+    counter->port_id = frame.header.line_port;
+    counter->pkts_rx = 1;
+    counter->pkts_dropped = 0;
+    send_udp_message_one_way(client_socket, &counter_msg, PORT_MANAGER_UDP);
+} else {
+    stats.total_dropped++;
+    LOG(LOG_WARN, "Frame #%u DROPPED: no usable connection for client-%u line-%u",
+        frame.header.frame_id,
+        frame.header.client_port,
+        frame.header.line_port);
+}
 }
 
 void handle_get_traffic_stats(udp_message_t *resp)

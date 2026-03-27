@@ -11,6 +11,7 @@
 #define PORT_MANAGER_UDP (5001)
 #define CONN_MANAGER_UDP (5002)
 #define TRAFFIC_MGR_UDP (5003)
+#define PROTECTION_MGR_UDP (5004)
 
 #define MAX_UDP_MSG_SIZE (512)
 #define MAX_CONN_NAME_CHARACTER (32)
@@ -118,11 +119,17 @@ typedef enum
     MSG_CREATE_CONN,       // CLI → Conn Mgr : create a connection (request → reply)
     MSG_DELETE_CONN,       // CLI → Conn Mgr : delete a connection (request → reply)
     MSG_GET_CONNECTIONS,   // CLI → Conn Mgr : get all connections (request → reply)
+    MSG_SWITCH_CONN_LINE,  // Protection Mgr → Conn Mgr : switch connection's line port (request → reply)
 
     // Traffic Manager messages
     MSG_GET_TRAFFIC_STATS, // CLI → Traffic Mgr : get traffic counters and if traffic up/down (request → reply)
     MSG_START_TRAFFIC,     // CLI → Traffic Mgr : start frame generation (request → reply)
     MSG_STOP_TRAFFIC,      // CLI → Traffic Mgr : stop frame generation (request → reply)
+
+    // Protection Manager messages
+    MSG_SET_PROTECTION_GROUP,    // CLI → Protection Mgr : create protection group (request → reply)
+    MSG_DELETE_PROTECTION_GROUP, // CLI → Protection Mgr : delete protection group (request → reply)
+    MSG_GET_PROTECTION_GROUP,    // CLI → Protection Mgr : get protection group status (request → reply)
 } msg_type_t;
 
 typedef enum
@@ -195,6 +202,13 @@ typedef struct
     char name[MAX_CONN_NAME_CHARACTER];
 } udp_delete_conn_request_t;
 
+// MSG_SWITCH_CONN_LINE request (Protection Mgr switches a connection's line port)
+typedef struct
+{
+    char name[MAX_CONN_NAME_CHARACTER];
+    uint8_t new_line_port;
+} udp_switch_conn_line_request_t;
+
 // MSG_GET_CONNECTIONS request
 typedef struct
 {
@@ -208,6 +222,16 @@ typedef struct
     uint8_t client_port; // 0 = random (3-6)
     uint8_t line_port;   // 0 = random (1-2)
 } udp_start_traffic_request_t;
+
+// MSG_GET_PROTECTION_GROUP reply
+typedef struct
+{
+    bool active;
+    uint32_t switchover_count;
+    conn_t protected_conns[MAX_CONNS];
+    uint8_t current_line_ports[MAX_CONNS]; // current line port for each connection
+    uint8_t conn_count;
+} udp_protection_group_reply_t;
 
 ////// Shared functions /////
 int create_udp_server(uint16_t);

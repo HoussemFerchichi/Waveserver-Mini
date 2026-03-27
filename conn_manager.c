@@ -271,6 +271,25 @@ resp->status = STATUS_SUCCESS;
 LOG(LOG_INFO, "deleted connection '%s'", deleted_name);
 }
 
+void handle_switch_conn_line(const udp_message_t *req, udp_message_t *resp)
+{
+const udp_switch_conn_line_request_t *payload = (const udp_switch_conn_line_request_t *)req->payload;
+
+conn_t *found_conn = find_connection_by_name(payload->name);
+if (found_conn == NULL) {
+set_error_msg(resp, "could not find connection with that name");
+LOG(LOG_ERROR, "switch connection: could not find connection (name=%s)", payload->name);
+return;
+}
+
+uint8_t old_line_port = found_conn->line_port;
+found_conn->line_port = payload->new_line_port;
+
+resp->status = STATUS_SUCCESS;
+LOG(LOG_INFO, "switched connection '%s' line port: %d → %d", 
+    payload->name, old_line_port, payload->new_line_port);
+}
+
 void handle_stop_traffic(udp_message_t *resp)
 {
     udp_message_t req = {0};
@@ -321,6 +340,11 @@ break;
 
 case MSG_DELETE_CONN:
 handle_delete_conn(req, resp);
+send_reply = true;
+break;
+
+case MSG_SWITCH_CONN_LINE:
+handle_switch_conn_line(req, resp);
 send_reply = true;
 break;
 
